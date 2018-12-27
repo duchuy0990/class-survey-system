@@ -1,0 +1,105 @@
+.boder-r-none{
+	border-right: none;
+}
+/*update 8/12 */
+.container nav div a{
+	font-weight: bold;
+}
+/*end*/
+#nav-profile .admin-status{
+	margin-top: 20px;
+	margin-left: 80px;
+	width: 80%;
+}
+	#nav-profile .admin-status table {
+		text-align: center;
+	}
+		#nav-profile .admin-status table tbody .status{
+			min-width: 400px;
+		}
+
+/*upadte note-table result*/
+
+
+.table-result{
+	margin: 20px 10px;
+	width: 98%;
+}
+
+.note-result{
+	margin-top: 20px;
+	margin-bottom: 80px;
+	font-size: 20px;
+	border-bottom: 1px solid #ccc;
+}
+.note-result .note-item{
+	padding-left: 50px;
+	display: flex;
+}
+.note-result .note-item label{
+	font-style: italic;
+	font-weight: bold;
+}
+.note-result .note-item p{
+	margin-left: 10px;
+}
+
+/*end*/
+/*update them export-excel*/
+.export-excel{
+	position: absolute;
+	top: -30px;
+	right: 30px;
+}
+.icon-export {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	box-shadow: 0 2px 6px #888;
+	cursor: pointer;
+}
+
+.icon-export:hover{
+	box-shadow: 0px -1px 20px black;
+}
+.overflay {
+	position: absolute;
+	transition: all .5s ease;
+	opacity: 0;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+	padding-top: 7px;
+	font-weight: bold;
+	font-size: 0px;
+}
+.export-excel:hover .overflay{
+	opacity: 1;
+	font-size: 16.5px;
+}
+.overFlayLeft{
+	height: 40px;
+	width: 0px;
+	top: 0;
+	right: 45px;
+	background-color: #0A9FFE;
+	border-radius: 10px;
+}
+.export-excel:hover .overFlayLeft{
+	width: 100px;
+
+}
+
+.export-excel:hover .arrow-right {
+	position: absolute;
+	top: 14px;
+	left: -6px;
+  	width: 0; 
+  	height: 0; 
+  	border-top: 6px solid transparent;
+  	border-bottom: 6px solid transparent;
+  	border-left: 6px solid #0A9FFE;
+  	transition: all .2s ease;
+}
+
+/*end*/

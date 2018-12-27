@@ -1,0 +1,20 @@
+.container-create{
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+.icon-add {
+	height: 36px;
+	width: 36px;
+	margin-bottom: 5px;
+	border-radius: 50%;
+
+}
+	.icon-add:hover{
+		background-color: #EAFF9F;
+		cursor: pointer;
+	}
+.create-subject{
+	margin-left: 200px;
+	margin-bottom: 20px;
+}

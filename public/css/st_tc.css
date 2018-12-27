@@ -1,0 +1,135 @@
+/*Thẻ đánh giá*/
+
+.card{
+	box-shadow: 0 2px 6px #888;
+	min-width: 200px;
+	max-width: 400px;
+	margin-top: 20px;
+	text-align: left;
+}
+.card .btn {
+	margin-top: 10px;
+	float: right;
+}
+.tc-list-class .survey-stt small,.sv-list-class .survey-stt small{
+	font-size: 18px;
+	font-weight: bold;
+}
+.tc-list-class a.btn-enter::after{
+	content: "Kết quả đánh giá";
+}
+
+.tc-list-class .survey-stt small.survey-done::after{
+	content: "Đã hoàn thành !";
+	color: #00DA38;
+}
+.survey-stt small.survey-fault::after{
+	content: "Chưa hoàn thành !";
+	color: red;
+}
+
+.sv-list-class a.btn-enter::after{
+	content: "Đánh giá môn học";
+}
+.sv-list-class .survey-stt small.survey-done::after{
+	content: "Đã đánh giá !";
+	color: #00DA38;
+}
+.sv-list-class .survey-stt small.survey-fault::after{
+	content: "Chưa đánh giá !";
+	color: red;
+}
+/*end thẻ*/
+
+
+/*Sinh viên đánh giá*/
+#name-class{
+	background-color: #54C8FE;
+	border-radius: 10px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 24px;
+	margin: 10px auto;
+	padding: 5px;	
+}
+.list-criteria{
+	margin: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+.list-criteria .branch-criteria{
+	margin-bottom: 10px;
+}
+/*update điểm*/
+.list-criteria .branch-criteria .node-branch .gr-point{
+	width: 32.6%;
+	list-style: none;
+	margin-left: 67.4%;
+}
+.list-criteria .branch-criteria .node-branch .gr-point .point-cri{
+	cursor: default;
+	font-weight: bold;
+	width: 17%;
+	text-align: center;
+	border-bottom: 1px solid #fff;
+}
+/*end update điểm*/
+.list-criteria .branch-criteria .node-branch .item-criteria{
+	list-style: none;
+	padding: 6px 0 2px 10px;
+	border-bottom: 0.5px solid #77E7ea;
+	display: flex;
+	justify-content: space-between;
+}
+	.list-criteria .branch-criteria .node-branch .item-criteria:hover{
+		background-color: #F2EFEF;
+	}
+	.list-criteria .branch-criteria .node-branch .item-criteria .gr-radio{
+		width: 32.6%;
+		margin-top: -6px;
+		margin-bottom: -10px;
+	}
+	.list-criteria .branch-criteria .node-branch .item-criteria .gr-radio .radio-item{
+		width: 17%;
+		padding-top: 6px;
+		height: 32px;
+		cursor: pointer;
+	}
+	.list-criteria .branch-criteria .node-branch .item-criteria .gr-radio input{
+		width: 16px;
+		height: 16px;
+		margin-left: 50%;
+		margin-right: 50%;
+		transform: translate(-50%,0);
+
+	}
+	.list-criteria .branch-criteria .node-branch .item-criteria .gr-radio .radio-item:hover{
+		background-color: #77E7ea;
+	}
+/*update 13/12 */
+.list-criteria .branch-criteria .node-branch .cri-feedback{
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	height: 150px;
+	resize: none;
+}
+.list-criteria .branch-criteria .node-branch textarea[placeholder]{
+	padding: 5px;
+}
+.list-criteria .branch-criteria .node-branch .cri-feedback{
+	font-style: normal;
+}
+
+/*end*/
+/*update progress*/
+.progress-cri{
+	margin: 40px 0px 20px 40px;
+}
+/*end*/
+
+#send-result-st{
+	margin-left: 50%;
+	transform: translate(-50%,0%);
+}
+/*end sv đánh giá*/

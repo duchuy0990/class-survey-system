@@ -1,0 +1,235 @@
+body{
+	overflow-y: scroll;
+}
+.text-btn-search{
+	font-weight: bold;
+	color: #fff;
+	margin-right:  10px;
+}
+.form-control{
+	font-size: 15px;
+	margin-right: 10px;
+}
+.navbar{
+	justify-content: space-between;
+}
+.navbar-brand{
+	margin-right: 50px;
+	font-size: 30px;
+	font-weight: bold;
+}
+.navbar-user {
+	cursor: pointer;	
+	padding-left: 5px;
+	margin-top: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: none;
+	background-color: transparent;
+
+}
+	.navbar-user:hover{
+		background-color: rgba(255,255,255,0.3);
+		border-radius: 5px;
+	}
+	.navbar-user span{
+		font-size: 18px;
+		color: #fff;
+	}
+		.navbar-user .usericon{
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+		}
+		.dropdown-toggle::after{
+			content: none;
+		}
+	.dropdown-item{
+		cursor: pointer;
+		margin-top: 5px;
+	}
+	.dropdown-item:hover{
+		background-color: #DEDED5;
+	}
+		.logout-user{
+			font-weight: bold;
+			border-top: 1px solid #ccc;
+		}
+		.logout-user:hover{
+			color: #317EDA;
+		}
+		.dropdown-item img{
+			margin-left: 10px;
+			height: 20px;
+			width: 20px;
+			border-radius: 52%;
+		}
+	
+.container{
+	margin-top: 100px;
+	margin-bottom: 30px;
+}
+	.content{
+		margin-top: 20px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-top: 1px solid #ccc;
+	}
+	.container .btn-manager{
+		margin-bottom: 10px;
+	}
+	.table-responsive{
+		box-shadow: 0 2px 6px #888;
+	}
+	.table-responsive table thead th{
+		border-right: 1px solid #fff;
+	}
+	.table-responsive table tbody tr .manager img{
+		cursor: pointer;
+	}
+	.table-responsive table tbody tr td,th{
+		border-right: 0.5px solid #ccc;
+
+	}
+	.table-responsive table tbody tr:hover td{
+		color: #1967C5;
+		border-right: 0.5px solid #ccc;
+	}
+		.table-responsive table tbody .name-subject{
+			min-width: 250px;
+		}
+		.table-responsive table tbody .name-teacher{
+			min-width: 150px;
+		}
+.icon {
+	height: 26px;
+	width: 26px;
+	border-radius: 50%;
+}
+	.watch-sub{
+		box-shadow: 0 2px 6px #888;
+	}
+	.watch-sub:hover{
+		background-color: #AFEEE7;
+	}
+
+.list-monhoc{
+	text-align: center;
+}
+.btn-toolbox{
+	width: 50px;
+	height: 26px;
+}
+.icon-toolbox{
+	height: 26px;
+	width: 26px;
+}
+
+.div-check{
+	width: inherit;
+    height: 32px;
+    display: flex;
+}
+	.div-check .checked {
+	    width: 22px;
+	    height: 22px;
+	    margin: 5px 0px;
+	    background-image: url('../Images/input-checkbox.png');
+	    background-repeat: no-repeat;
+	    background-position: -23px -23px;
+	    cursor: pointer;
+
+	}
+
+	.div-check .unchecked {
+	    width: 22px;
+	    height: 22px;
+	    margin: 5px 0px;
+	    background-image: url("../Images/input-checkbox.png");
+	    background-repeat: no-repeat;
+	    background-position: -23px 0px;
+	    cursor: pointer;
+	}
+
+.row-survey{
+	margin-top: 12px;
+}
+.bd-bottom{
+	border-bottom: 1px solid #ccc;
+}
+.action-survey{
+	display: flex;
+}
+
+
+
+/*thêm mới ngày 7/12 */
+table{
+	text-align: center;
+}
+table tr{
+	cursor: pointer;
+}
+table tr td:nth-child(2),table tr td:nth-child(4){
+	text-align: left;
+	padding-left: 10px;
+}
+
+.btn-change-phieu{
+	margin-top: 20px;
+	margin-left: 40%;
+}
+nav .show>.btn-info.dropdown-toggle {
+    color: #fff;
+    background-color: rgba(255,255,255,0.3);
+    border-color: none;
+}
+nav .show>.btn-info.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+.dropdown-menu{
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+	.loader {
+		display: block;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 64px;
+		height: 64px;
+	}
+	.loader div {
+		box-sizing: border-box;
+		display: block;
+		position: absolute;
+		width: 51px;
+		height: 51px;
+		margin: 6px;
+		border: 6px solid rgb(0, 0, 255);
+		border-radius: 50%;
+		animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+		border-color: rgb(0, 0, 255) transparent transparent transparent;
+	}
+	.loader div:nth-child(1) {
+		animation-delay: -0.45s;
+	}
+	.loader div:nth-child(2) {
+		animation-delay: -0.3s;
+	}
+	.loader div:nth-child(3) {
+		animation-delay: -0.15s;
+	}
+	@keyframes loader {
+		0% {
+		transform: rotate(0deg);
+		}
+		100% {
+		transform: rotate(360deg);
+		}
+	}
+
+
