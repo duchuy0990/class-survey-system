@@ -1,17 +1,31 @@
 body {
     margin: 0%;
     padding: 0%;
-    background-image: url('../images/survey2.jpg');
+    background-image: url('../Images/survey2.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     font-family: sans-serif;
 }
+.title-log{
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50px;
+    left: 50%;
+    animation: title 3s linear infinite alternate;
+}
+@keyframes title {
+    from {left: 46%;}
+    to {left: 54%;}
+}
+
 .loginbox {
     width: 320px;
     height: 420px;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.6);
     color: #ffffff;
     top: 55%;
     left: 50%;
@@ -19,7 +33,6 @@ body {
     transform: translate(-50%,-50%);
     box-sizing: border-box;
     padding: 70px 30px;
-    opacity: 0.6;
 }
 .avatar {
     width: 120px;
@@ -29,7 +42,7 @@ body {
     top: -50px;
     left: calc(50% - 60px);
 }
-h1 {
+.loginbox h1 {
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
@@ -52,7 +65,6 @@ h1 {
     height: 40px;
     color: #ffffff;
     font-size: 16px;
-    padding-left: 5px;
 }
 .loginbox input[type="submit"] {
     border: none;
@@ -76,5 +88,15 @@ h1 {
 }
 .loginbox a:hover {
     color: #ffc107;
+}
 
+.loginbox ul{
+    list-style: none;
+    padding-left: 10px;
+    color: rgb(255,34,34,0.8);
+    font-size: 15px;
+    margin-top: -10px;
+}
+.loginbox ul li{
+    margin-bottom: 5px;
 }
