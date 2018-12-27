@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Đăng Nhập</title>
-    <link rel="stylesheet" type="text/css" href="{{('css/LoginForm.css')}}">
+    <title>Đăng Nhập - Quản trị viên</title>
+    <link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/LoginForm.css')}}">
 </head>
 <body>
+    <div class="title-log">
+        <h1>Quản lý đánh giá môn học</h1>
+    </div>
     <div class="loginbox">
         <img src="{{asset('images/usericon.png')}}" class="avatar">
         <h1>Login Here</h1>

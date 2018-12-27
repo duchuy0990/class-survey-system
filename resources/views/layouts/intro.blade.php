@@ -10,8 +10,8 @@
 
 @section('content')
 <div class="container ctn">
-    <div class="row">
-        <div class="col-sm-6">
+    <div class="row at-block">
+        <div class="col-sm-8 col-md-7 col-lg-6">
             <div id="carouselExampleIndicators " class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -39,8 +39,8 @@
                   </div>
             </div>
         </div>
-        <div class="col-sm-2"></div>
-        <div class="col-sm-4 login">
+        <div class="col-sm-2 col-md-2"></div>
+        <div class="col-sm-4 col-md-4">
             @yield('login')
         </div>
     </div>
@@ -67,4 +67,9 @@
         </div>
     </div>
 </div>
+<blockquote class="blockquote text-center">
+    <p class="mb-0">Website đánh giá môn học - Đại học Công nghệ - Đại học quốc gia Hà nội</p>
+    <footer class="blockquote-footer">Được hoàn thành bởi <cite title="Source Title">ĐHH-Team</cite>
+    </footer>
+</blockquote>
 @endsection
