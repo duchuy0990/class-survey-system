@@ -79,6 +79,7 @@ class StudentController extends Controller
                         values (?, ?, ?, ?)', [Auth::user()->id, $item, $ma_mh, $mark]);
         }
         DB::commit();
+        $request->session()->put('success','đánh giá hoàn tất. Xin cám ơn! Sau 3s hệ thống sẽ tự động đưa bạn về trang chủ');
         return redirect('student/danh_gia/status/done');
     }
 

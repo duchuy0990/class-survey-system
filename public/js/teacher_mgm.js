@@ -43,8 +43,8 @@ $(document).ready(function () {
     
     $('.btn-delete').click(function (e) { 
         e.preventDefault();
-        username = $(this).attr('data');
-        $("#delete-modal").find("#username").val(username);
+        id = $(this).attr('data');
+        $("#delete-modal").find("#id").val(id);
     });
 
     $('#form-delete').submit(function (e) {
@@ -95,6 +95,30 @@ $(document).ready(function () {
     });
 
     //add
+    //excel
+    $('#form-add-excel').submit(function (e) { 
+        e.preventDefault();
+        var formData = new FormData();
+        formData.append('file', $('form#form-add-excel input#file')[0].files[0]);
+        // var file = new FormData($(this).find("#file")[0].files[0]);
+        $.ajax({
+            type: "post",
+            url: "teacher_mgm/import/excel",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                        alert(data);
+                        $.get("teacher_mgm",
+                            function (data) {
+                                $('.content').html(data);
+                                $(".modal-backdrop").remove();
+                            }
+                        );
+                    }
+        });
+    });
+    //add 1 gv
     $('#form-add-1').submit(function (e) { 
         e.preventDefault();
         data = $(this).serialize();

@@ -1,4 +1,6 @@
 <?php
+use App\Exports\result_dssv_export;
+use Maatwebsite\Excel\Facades\Excel;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +31,14 @@ Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'survey_ref_mgm'], function () {
         Route::get('/', ['uses' => 'AdminController@survey_ref_mgm']);
         Route::get('/search/{class_search}', ['uses' => 'AdminController@classSearch']);
-        route::get('/result/{ma_mh}',['uses' => 'AdminController@result']);
+        Route::get('/result/{ma_mh}',['uses' => 'AdminController@result']);
+        
+        Route::post('/import/excel', ['uses' => 'ExcelController@studentclassimport']);
+
+        route::get("export/excel/{ma_mh}", function($ma_mh) {
+            return Excel::download(new result_dssv_export($ma_mh), 'result'.$ma_mh.'.xlsx');
+        });
+        
         //Route::get('/delete/class/{ma_mh}',['uses'=>'AdminController@deleteClass']);
     });
 
@@ -67,7 +76,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/search/{gv_search}', ['uses' => 'AdminController@teacherSearch']);
         Route::post('/import/excel', ['uses'=>'ExcelController@teacherimport']);
         Route::group(['prefix' => 'import'], function () {
-            // Route::post('/excel', ['uses'=>'ExcelController@studentimport']);
+            Route::post('/excel', ['uses'=>'ExcelController@teacherimport']);
             Route::post('/1', ['uses' => 'AdminController@teacherAdd1']);
         });
     });
@@ -127,5 +136,11 @@ Route::group(['prefix' => 'teacher'], function () {
     Route::get('/home', ['as'=>'teacher.home','uses'=>'TeacherController@home']);
     
     Route::post('/logout', ['as'=>'teacher.logout','uses'=>'Auth\TeacherLoginController@logout']);
+
+    Route::get('/result/{ma_mh}',['uses' => 'TeacherController@result']);
+
+    Route::get('export/{ma_mh}', function ($ma_mh) {
+        return Excel::download(new result_dssv_export($ma_mh), 'result'.$ma_mh.'.xlsx');
+    });
     
 }); //end route teacher

@@ -6,6 +6,17 @@
 	max-width: 400px;
 	margin-top: 20px;
 	text-align: left;
+	margin-right: 20px; 
+	min-width: 300px;
+	min-height: 270px;
+}
+.card-header{
+	max-height: 64px;
+	min-height: 63px;
+}
+.card #count-cpl{
+	font-weight: bold;
+	font-style: italic;
 }
 .card .btn {
 	margin-top: 10px;
@@ -38,6 +49,17 @@
 .sv-list-class .survey-stt small.survey-fault::after{
 	content: "Chưa đánh giá !";
 	color: red;
+}
+
+@media (min-width: 769px){
+	.card-columns{
+		column-count: 3;
+	}
+}
+@media (width: 768px){
+	.card-columns{
+		column-count: 2;
+	}
 }
 /*end thẻ*/
 

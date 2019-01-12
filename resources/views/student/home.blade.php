@@ -13,7 +13,7 @@
 @section('link_logout'){{url('student/logout')}}@endsection
 
 @section('content')
-    <div class="card-column sv-list-class">
+    <div class="card-columns sv-list-class">
         @foreach ($classes as $class)
             <div class="card border-dark mb-3">
                 @if ($class->da_danh_gia==0)

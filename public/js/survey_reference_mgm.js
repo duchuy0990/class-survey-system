@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     $("form.search-form").submit(function (e) { 
         e.preventDefault();
         data = $("form.search-form").find("input").val();
@@ -31,12 +36,28 @@ $(document).ready(function () {
                 $("table.list-monhoc tbody").html(rows);
         });
     });
-});
-
-$(document).ajaxStart(function(){
-    $(".loader").css("display", "block");
-});
-
-$(document).ajaxComplete(function(){
-    $(".loader").css("display", "none");
+    //add
+    //excel
+    $('#form-add-excel').submit(function (e) { 
+        e.preventDefault();
+        var formData = new FormData();
+        formData.append('file', $('form#form-add-excel input#file')[0].files[0]);
+        // var file = new FormData($(this).find("#file")[0].files[0]);
+        $.ajax({
+            type: "post",
+            url: "survey_ref_mgm/import/excel",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                        alert(data);
+                        $.get("survey_ref_mgm",
+                            function (data) {
+                                $('.content').html(data);
+                                $(".modal-backdrop").remove();
+                            }
+                        );
+                    }
+        });
+    });
 });

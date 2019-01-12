@@ -22,14 +22,6 @@ class ExcelController extends Controller
     }
 
     /**
-     * @return \Illuminate\Support\Collection
-     */
-    public function importExportView()
-    {
-        return view('import');
-    }
-
-    /**
      * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
      */
     public function export()
@@ -49,23 +41,22 @@ class ExcelController extends Controller
         }
         else return "k nhận được tệp đính kèm";
     }
-    public function teacherimport()
+    public function teacherimport(Request $request)
     {
-        Excel::import(new TeachersImport,request()->file('file'));
-        return back();
+        if($request->hasFile('file')) {
+            $file = $request->file;
+            Excel::import(new TeachersImport,$file);
+            return "thành công!";
+        }
+        else return "k nhận được tệp đính kèm";
     }
-    public function studentclassimport()
+    public function studentclassimport(Request $request)
     {
-        Excel::import(new StudentsClassImport,request()->file('file'));
-        return back()->with('thongbao', 'import thanh cong');
-    }
-
-    public function testview() {
-
-        return view('import');
-    }
-
-    public function posttest() {
-        Excel::import(new StudentsImport,request()->file('file'));
+        if($request->hasFile('file')) {
+            $file = $request->file;
+            Excel::import(new StudentsClassImport,$file);
+            return "thành công!";
+        }
+        else return "k nhận được tệp đính kèm";
     }
 }

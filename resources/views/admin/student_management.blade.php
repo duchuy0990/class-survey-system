@@ -1,8 +1,18 @@
+<head>
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+</head>
+
 <form class="search-form" action="" style="margin:auto;max-width:400px">
-    <input type="text" placeholder="Search.." name="sv_search">
-    <button type="submit"><i class="fa fa-search"></i></button>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search.." name="sv_search">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
 </form>
-<div class="dropdown">
+<div class="dropdown add-item">
   <a href="" data-toggle="dropdown"><i style="font-size:30px;" class="fas fa-plus"></i></a>
   <div class="dropdown-menu">
     <a class="dropdown-item" data-toggle="modal" data-target="#add-1-modal" data-backdrop="true">Thêm thủ công</a>

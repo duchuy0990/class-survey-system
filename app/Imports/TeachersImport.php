@@ -18,11 +18,15 @@ class TeachersImport implements ToModel,WithHeadingRow
     */
     public function model(array $row)
     {
+        $username = trim($row['Tên đăng nhập']);
+        $password = trim($row['Mật khẩu']);
+        $ho_ten = trim($row['Họ và tên']);
+        $email = trim($row['VNU email']);
         return new Teacher([
-            'username' => $row['Tên đăng nhập'],
-            'password' => bcrypt($row['Mật khẩu']),
-            'ho_ten' => $row['Họ và tên'],
-            'email' =>$row['VNU email'],
+            'username' => $username,
+            'password' => bcrypt($password),
+            'ho_ten' => $ho_ten,
+            'email' => $email,
         ]);
     }
 }

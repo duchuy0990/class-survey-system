@@ -204,7 +204,8 @@ class AdminController extends Controller
      * @param username giảng viên
      */
     public function deleteTeacher(Request $request) {
-        DB::table('giang_vien')->where('username','=',$request->username)->delete();
+        $teacher = Teacher::find($request->id);
+        $teacher->delete();
         return redirect("admin/home");
     }
 
@@ -251,9 +252,9 @@ class AdminController extends Controller
     public function classSearch($class_search) {
         $info = DB::select('SELECT ten_mh, gv, ma_mh, sv, count(*) as so_sv
                                 FROM class 
-                                WHERE MATCH(ten_mh) AGAINST( ?) 
-                                    or MATCH(gv) AGAINST( ?) 
-                                    or MATCH(ma_mh) AGAINST( ?) 
+                                WHERE MATCH(ten_mh) AGAINST(?) 
+                                    or MATCH(gv) AGAINST(?) 
+                                    or MATCH(ma_mh) AGAINST(?) 
                                 GROUP BY ma_mh', [$class_search,$class_search,$class_search]);
         foreach ($info as $value) {
             $da_danh_gia = DB::select('SELECT count(*) as da_danh_gia FROM class WHERE ma_mh =\''.$value->ma_mh.'\' AND da_danh_gia = 1 GROUP BY ma_mh');

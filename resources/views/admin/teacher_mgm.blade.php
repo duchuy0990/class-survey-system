@@ -1,8 +1,18 @@
+<head>
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+</head>
+
 <form class="search-form" action="" style="margin:auto;max-width:400px">
-    <input type="text" placeholder="Search.." name="gv_search">
-    <button type="submit"><i class="fa fa-search"></i></button>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search.." name="gv_search">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
 </form>
-<div class="dropdown">
+<div class="dropdown add-item">
   <a href="" data-toggle="dropdown"><i style="font-size:30px;" class="fas fa-plus"></i></a>
   <div class="dropdown-menu">
     <a class="dropdown-item" data-toggle="modal" data-target="#add-1-modal" data-backdrop="true">Thêm thủ công</a>
@@ -56,7 +66,7 @@
                     <form id="form-edit" action="">
                         <input type="hidden" id="id" name="id">
                         <div class="form-group">
-                            <label for="username">Username:</label>
+                            <label for="username">Tài khoản:</label>
                             <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
                         </div>
                         <div class="form-group">
@@ -91,7 +101,7 @@
                 <div class="modal-body">
                     <p>Bạn có chắc chắc muốn xóa không?</p>
                     <form id="form-delete" action="">
-                        <input type="hidden" id="username" name="username">
+                        <input type="hidden" id="id" name="id">
                         <button type="submit" class="btn btn-danger form-inline">Xóa</button>
                         <button type="button" class="btn btn-secondary form-inline" data-dismiss="modal">Thôi</button>
                     </form>
@@ -149,6 +159,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <form id="form-add-excel" action="">
+                        @csrf
                         <input type="file" id="file" name="file" class="form-control">
                         <br>
                         <button type="submit" class="btn btn-success">Import User Data</button>

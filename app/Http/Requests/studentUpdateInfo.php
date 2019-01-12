@@ -24,7 +24,7 @@ class studentUpdateInfo extends FormRequest
     public function rules()
     {
         return [
-            'msv' => 'required',
+            'username' => 'required',
             'ho_ten' => 'required',
             'password' => 'required',
             'lop_khoa_hoc' => 'required',
@@ -34,7 +34,7 @@ class studentUpdateInfo extends FormRequest
 
     public function messages() {
         return [
-            'msv.required' => 'Trường msv không được bỏ trống',
+            'username.required' => 'Trường msv không được bỏ trống',
             'ho_ten.required' => 'Trường họ tên không được bỏ trống',
             'password.required' => 'Trường mật khẩu không được bỏ trống',
             'lop_khoa_hoc.required' => 'Trường lớp khóa học không được bỏ trống',

@@ -4,7 +4,7 @@
     <a class="navbar-brand" href="{{ route('admin.home') }}">ADMIN</a>
 @stop
 
-@section('link_logout'){{url('student/logout')}}@endsection
+@section('link_logout'){{url('admin/logout')}}@endsection
 
 	
 @section('content')

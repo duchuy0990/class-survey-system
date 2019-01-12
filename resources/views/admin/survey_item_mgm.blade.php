@@ -1,11 +1,14 @@
+<head>
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+</head>
 <div id="data-phieu-ks" name="phieu-ks"> 
     <div>
         @foreach ($result as $category)
             <div class="row category-survey">
                 <h3 class="col-9">{{ key($category) }}</h3>
                 <div class="col-3">
-                <button type="button" class="btn btn-success btn-sm btn-edit-category" data="{{ key($category) }}" data-toggle="modal" data-target="#category-edit-modal">Sửa</button>
-                <button type="button" class="btn btn-danger btn-sm btn-delete-category" data="{{ key($category) }}" data-toggle="modal" data-target="#category-delete-modal">Xóa</button>
+                    <button type="button" class="btn btn-success btn-sm btn-edit-category" data="{{ key($category) }}" data-toggle="modal" data-target="#category-edit-modal">Sửa</button>
+                    <button type="button" class="btn btn-danger btn-sm btn-delete-category" data="{{ key($category) }}" data-toggle="modal" data-target="#category-delete-modal">Xóa</button>
                 </div>
             </div>
                 @foreach ($category as $survey)
@@ -22,12 +25,13 @@
             <div class="row">
                 <p class="col-8"></p>
                 <div class="col-4">
-                    <button type="button" class="btn_add_item" data="{{key($category)}}" data-toggle="modal" data-target="#item-add-modal">Thêm item</button>
+                    <button type="button" class="btn_add_item btn btn-primary" data="{{key($category)}}" data-toggle="modal" data-target="#item-add-modal">Thêm nội dung</button>
                 </div>
             </div>
+            <div class="line-pri-bottom"></div>
         @endforeach
         <div class="row">
-                <button type="button" class="btn_add_category" data-toggle="modal" data-target="#category-add-modal">Thêm category</button>
+            <button type="button" class="btn_add_category btn btn-info" data-toggle="modal" data-target="#category-add-modal">Thêm danh mục</button>
         </div>
     </div>
 

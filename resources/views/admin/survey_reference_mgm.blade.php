@@ -1,11 +1,47 @@
+<head>
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+</head>
+
+
 <form class="search-form" action="" style="margin:auto;max-width:400px">
-    <input type="text" placeholder="Search.." name="class_search">
-    <button type="submit"><i class="fa fa-search"></i></button>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search.." name="class_search">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
 </form>
+<div class="add-item">
+    <a  data-toggle="modal" data-target="#add-excel-modal" style="cursor:pointer;color:rgb(0,0,255)">
+        <i style="font-size:30px;" class="fas fa-plus"></i>
+    </a>
+</div>
+<!-- Modal thêm excel -->
+<div class="modal fade" id="add-excel-modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">ADD</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form id="form-add-excel" action="">
+                    <input type="file" id="file" name="file" class="form-control">
+                    <br>
+                    <button type="submit" class="btn btn-success">Thêm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="data-cuoc-ks" name="cuoc-ks">
     <div class="table-responsive">
         <table class="table table-hover list-monhoc">
-            <thead class="thead-dark">
+            <thead class="table-active">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Tên khóa học</th>

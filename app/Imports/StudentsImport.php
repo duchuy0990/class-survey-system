@@ -22,12 +22,17 @@ class StudentsImport implements ToModel, WithHeadingRow
    public function model(array $row)
     {
             // echo json_encode($row ['Mã sinh viên/Tên đăng nhập']);
+            $username = trim($row['Mã sinh viên']);
+            $password = trim($row['Mật khẩu']);
+            $ho_ten = trim($row['Họ và tên']);
+            $email = trim($row['VNU email']);
+            $lkh = trim($row['Khóa đào tạo']);
             return new Student([
-                'username' =>$row['Mã sinh viên'],
-                'password'=>$row['Mật khẩu'],
-                'ho_ten' =>$row['Họ và tên'],
-                'email'=>$row['VNU email'],
-                'lop_khoa_hoc'=>$row['Khóa đào tạo'],
+                'username' =>$username,
+                'password'=>bcrypt($password),
+                'ho_ten' =>$ho_ten,
+                'email'=>$email,
+                'lop_khoa_hoc'=>$lkh,
             ]);
     }
 }

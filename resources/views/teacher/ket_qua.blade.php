@@ -5,10 +5,10 @@
 @endsection
 
 @section('guard')
-    <a class="navbar-brand" href="{{ route('admin.home') }}">ADMIN</a>
+    <a class="navbar-brand" href="{{ route('teacher.home') }}">TEACHER</a>
 @stop
 
-@section('link_logout'){{url('admin/logout')}}@endsection
+@section('link_logout'){{url('teacher/logout')}}@endsection
 
 @section('content')
     <nav>
@@ -75,7 +75,7 @@
                     <div class="col justify-content-end">
                         <!-- icon export -->.
                         <div class="export-excel">
-                            <a href="{{url('admin/survey_ref_mgm/export/excel/'.$mh_info[0]->ma_mh)}}" target="_blank"><img class="icon-export" src="{{asset('images/icon-export-excel.png')}}"></a>
+                            <a href="{{url('teacher/export/'.$mh_info[0]->ma_mh)}}" target="_blank"><img class="icon-export" src="{{asset('images/icon-export-excel.png')}}"></a>
                             <div class="overflay overFlayLeft">
                                 <label>Xuất excel !</label>
                             </div>

@@ -105,16 +105,16 @@ $(document).ready(function () {
     });
 
     //add
-    // form add excel bị lỗi
+    //excel
     $('#form-add-excel').submit(function (e) { 
         e.preventDefault();
-        // var formData = new FormData();
-        // formData.append('file', $('form#form-add-excel input#file')[0].files[0]);
-        var file = new FormData($(this)[0].files);
+        var formData = new FormData();
+        formData.append('file', $('form#form-add-excel input#file')[0].files[0]);
+        // var file = new FormData($(this).find("#file")[0].files[0]);
         $.ajax({
             type: "post",
             url: "student_mgm/import/excel",
-            data: file,
+            data: formData,
             contentType: false,
             processData: false,
             success: function (data) {
